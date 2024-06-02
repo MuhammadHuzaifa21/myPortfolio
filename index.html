@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+</head>
+<body class="light-mode">
+    <div class="container">
+        
+        <!-- Nav Bar -->
+        <nav>
+            <ul>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button id="themeToggle" class="toggle btn btn-secondary">Toggle Theme</button>
+                </li>
+            </ul>
+        </nav>
+        
+        <!-- Theme Toggle Button -->
+        
+        <br><br>
+
+        <!-- Header Section -->
+        <header>
+            <h1>Welcome to My Portfolio</h1>
+            <p>Hi, I'm Muhammad Huzaifa. <br>
+                I'm a Final Year Student majoring in Software Engineering. <br>
+                I enjoy taking on challenges and delving further into this thriving sector to obtain real-world experience.
+            </p>
+        </header>
+
+        <!-- Visitor Counter -->
+        <p id="visitorCount" class="text-center"></p>
+
+        <!-- Projects Section -->
+        <section id="projects" class="my-5">
+            <h2 class="text-center">Projects</h2>
+            <div class="row justify-content-center">
+                <!-- Project Item 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card card-light">
+                        <div class="card-body proj-body">
+                            <h5 class="card-title card-light text-center">Car Rental Management System</h5>
+                            <h6 class="card-subtitle text-center">UIT University, Karachi </h6>
+                            <p class="card-text">
+                                <li> Designed and Developed a Car Rental Management System using Python.</li>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Item 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card card-light">
+                        <div class="card-body proj-body">
+                            <h5 class="card-title card-light text-center">Zenity-Based Ubuntu GUI</h5>
+                            <h6 class="card-subtitle text-center">UIT University, Karachi </h6>
+                            <p class="card-text">
+                                <li> A User-Friendly Ubuntu OS GUI using Zenity and Shell Script. </li>
+                                <li> Enhanced Usability: Intuitive Dialogues for File Management, System Info, and Utilities. </li>
+                            </p>
+                            <a href="https://github.com/MuhammadHuzaifa21/Zenity-Based-Ubuntu-GUI" class="btn btn-secondary details" target="_blank">See Details</a>
+                        </div>
+                    </div>
+                </div>                    
+                <!-- Project Item 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card card-light">
+                        <div class="card-body proj-body">
+                            <h5 class="card-title card-light text-center">Chemical Tracking System</h5>
+                            <h6 class="card-subtitle text-center">Indus Lube Oil, Karachi.</h6>
+                            <p class="card-text">
+                                <li> Industry Based Project - To manage inventory and keep track of chemical resources.</li>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="my-5">
+            <h2 class="text-center">Skills</h2>
+            <div class="text-center">
+                <!-- Skill Badge & Logos -->
+                <div class="skill-container">
+                    <div class="skill-item">
+                        <img src="Logos/html-5.png" alt="HTML Logo">
+                        <span class="badge bg-secondary html">HTML</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="Logos/css-3.png" alt="CSS Logo">
+                        <span class="badge bg-secondary css">CSS</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="Logos/js.png" alt="JavaScript Logo">
+                        <span class="badge bg-secondary js">JavaScript</span>                    
+                    </div>
+                    <div class="skill-item">
+                        <img src="Logos/python.png" alt="Python Logo">
+                        <span class="badge bg-secondary python">Python</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="Logos/java.png" alt="Java Logo"> <br>
+                        <span class="badge bg-secondary java">Java</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="my-5">
+            <h2 class="text-center">Contact Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form id="contactForm" class="position-relative">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="name" placeholder="Name" required>
+                            <label for="name">Name</label>
+                            <div class="icon-container">
+                                <i class="bi bi-person"></i>
+                            </div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="Email" required>
+                            <label for="email">Email</label>
+                            <div class="icon-container">
+                                <i class="bi bi-envelope"></i>
+                            </div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" id="message" placeholder="Message" rows="3" required></textarea>
+                            <label for="message">Message</label>
+                            <div class="icon-container">
+                                <i class="bi bi-chat-dots"></i>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-secondary submitbtn">Send Message</button>
+                        </div>
+                        <div id="successMessage" class="alert alert-success" role="alert" style="display: none;">
+                            Message sent successfully!
+                        </div>                        
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="my-5">
+            <h2 class="text-center">Testimonials</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="testimonial">
+                        <p class="quote">"Muhammad Huzaifa is a dedicated and skilled professional. His work on our project was great!"</p>
+                        <p class="author">- Zahir Sheikh</p>
+                    </div>
+                    <div class="testimonial">
+                        <p class="quote">"A pleasure to work with! Delivered high-quality work on time."</p>
+                        <p class="author">- Mehmood Sheikh</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <footer>
+        <div class="footer-container">
+            - - - - - - - - - - - - <a href="https://www.linkedin.com/in/muhammad-huzaifa21/" target="_blank" class="social-icon">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/MuhammadHuzaifa21" target="_blank" class="social-icon">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/xx_nfk_xx/" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a> - - - - - - - - - - -
+        </div>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-analytics.js"></script> -->
+    
+</body>
+</html>
